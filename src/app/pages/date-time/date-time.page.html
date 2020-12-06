@@ -1,0 +1,14 @@
+<app-header titulo="datetime"></app-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-datetime [value]="fecha.toISOString()" (ionChange)="tiempo($event)" mode="ios"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime [value]="fecha.toISOString()" (ionChange)="tiempo($event)" [pickerOptions]="customPickerOptions" mode="ios"></ion-datetime>
+    </ion-item>
+  </ion-list>
+</ion-content>
