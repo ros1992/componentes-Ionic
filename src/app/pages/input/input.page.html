@@ -1,0 +1,38 @@
+<app-header titulo="input"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Floating Label</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Fixed Label</ion-label>
+    <ion-input type="date"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Stacked Label</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmin(formulario)">
+
+    <ion-list-header>
+      <ion-label>Formulario Válido:  </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="floating">Email: </ion-label>
+      <ion-input type="email" required name="email" [(ngModel)]="usuario.email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password: </ion-label>
+      <ion-input type="password" required name="password" [(ngModel)]="usuario.password"></ion-input>
+    </ion-item>
+
+    <ion-button [disabled]="formulario.invalid"  expand="block" type="submin" color="success">
+      Login
+    </ion-button>
+
+  </form>
+</ion-content>
