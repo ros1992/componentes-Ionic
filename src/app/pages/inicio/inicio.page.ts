@@ -68,6 +68,11 @@ export class InicioPage implements OnInit {
       icon: 'document-text-outline',
       name: 'Input',
       redirectTo: '/input'
+    },
+    {
+      icon: 'contract-outline',
+      name: 'List',
+      redirectTo: '/list'
     }
   ];
   constructor() { }
